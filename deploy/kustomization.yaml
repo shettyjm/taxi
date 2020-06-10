@@ -5,3 +5,6 @@ configMapGenerator:
 - name: www-files
   files:
   - index.html
+commonLabels:
+  app.kubernetes.io/part-of: taxi
+  app.kubernetes.io/name: taxi
