@@ -2,19 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: taxi
-  labels:
-    app.kubernetes.io/name: taxi
-    app.kubernetes.io/version: 0.0.1
 spec:
   replicas: 1
   selector:
     matchLabels:
       app.kubernetes.io/name: taxi
+      app.kubernetes.io/part-of: taxi
       app.kubernetes.io/version: 0.0.1
   template:
     metadata:
       labels:
         app.kubernetes.io/name: taxi
+        app.kubernetes.io/part-of: taxi
         app.kubernetes.io/version: 0.0.1
     spec:
       containers:
